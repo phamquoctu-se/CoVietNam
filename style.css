@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  display: flex;
+  background-color: red;
+  width: 1000px;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag > #star {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+
+  /* cắt hình sao 5 cánh */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.button-to-play-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 50px;
+  width: 200px;
+}
+
+#music {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .flag {
+    width: 500px;
+    height: 300px;
+  }
+
+  .flag > #star {
+    height: 100px;
+    width: 100px;
+  }
+}
